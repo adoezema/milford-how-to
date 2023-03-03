@@ -6,10 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .collapsible {
+    background-color: #167ecf;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+    background-color: #082C48;
+    }
+    .collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+    }
+
+    .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    }
+    .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    }
+</style>
 <body style="background-color: #ffffff; font-family: Arial, Helvetica, sans-serif;">
     <h3 id="how-to-guide-on-feature-editing">How-To Guide on Feature Editing</h3>
-    <h4 id="creating-features">Creating Features</h4>
-    <ol>
+    <button type="button" class="collapsible">Creating Features</button>
+    <ol class="content">
         <li>Select the "Editor" button on the top menu bar</li>
         <img src="images/edit-button.png" alt="Sdit button" width="60%">
         <li>Select desired layer you want to add linework to</li>
@@ -31,13 +65,29 @@
         <li>Fill out any relevant attribute information and select <strong>"Create"</strong></li>
         <img src="images/create.png" alt="Create" width="60%">
     </ol>
-    <h4 id="update-attributes">Update Attributes</h4>
-    <ol>
+    <button type="button" class="collapsible">Update Attributes</button>
+    <ol class="content">
         <li>Select <strong>"Select"</strong> undert the Edit Features section</li>
         <img src="images/edit-atts-select.png" alt="Select", width="60%">
         <li>Select desired feature you want to update</li>
         <li>Select <strong>"Update"</strong> when you are finished and want to save your changes</li>
         <img src="images/update-delete.png" alt="Update" width="60%">
     </ol>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+    
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
