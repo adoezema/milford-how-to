@@ -8,7 +8,7 @@
 </head>
 <style>
     .collapsible {
-    background-color: #167ecf;
+    background-color: #0d3948;
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -20,9 +20,11 @@
     font-size: 15px;
     margin-bottom: 3px;
     }
-
+    button {
+        font-family: Microsoft YaHei, Arial, Helvetica, sans-serif;
+    }
     .active, .collapsible:hover {
-    background-color: #082C48;
+    background-color: #652300;
     }
     .collapsible:after {
     content: '\02795'; /* Unicode character for "plus" sign (+) */
@@ -44,28 +46,13 @@
     padding-left: 25px;
     }
 </style>
-<body style="background-color: #ffffff; font-family: Arial, Helvetica, sans-serif;">
+<body style="background-color: #ffffff; font-family: Microsoft YaHei, Arial, Helvetica, sans-serif;">
     <h3 id="how-to-guide-on-feature-editing">How-To Guide on Feature Editing</h3>
     <button type="button" class="collapsible">Creating Features</button>
     <ol class="content">
-        <li>Select the "Editor" button on the top menu bar</li>
-        <img src="images/edit-button.png" alt="Sdit button" width="60%">
-        <li>Select desired layer you want to add linework to</li>
+        <li>Select <strong>"New Feature"</strong></li>
         <img src="images/select-layer.png" alt="Select layer" width="60%">
-        <li>Enable Snapping</li>
-        <ul><li>You will want to snap lines to points when creating new features</li></ul>
-        <ol>
-            <li>Select <strong>"Settings"</strong></li>
-            <li>Select <strong>"Snapping Layers"</strong></li>
-            <li>Select the <strong>"Layer/Group"</strong></li>
-            <li>Select the desired Layer you want to snap to</li>
-            <img src="images/snapping.png" alt="Snapping" width="60%">
-        </ol>
-        <li>Hover over point until red circle appears</li>
-        <li>Click the start point, should be point feature</li>
-        <li>Hover over end point until red circle appears</li>
-        <li>Double Click to finish adding feature</li>
-        <img src="images/snapping-indicator.png" alt="snapping idnicator" width="60%">
+        <li>Place pin on desired area of the map.</li>
         <li>Fill out any relevant attribute information and select <strong>"Create"</strong></li>
         <img src="images/create.png" alt="Create" width="60%">
     </ol>
